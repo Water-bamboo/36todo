@@ -20,7 +20,7 @@ class mail_queueModel extends Model
         $this->clear();
         //根据优先级排序获取
         $mails = $this->where(array('lock_expiry'=>array('lt', time())))->order('priority DESC,id,err_num')->limit($limit)->select();
-        if (!$mails) return false;
+        if (!$mails) return -1;
         //增加一次发送错误并且把锁定时间延长避免多个发送请求冲突
         $qids = array();
         foreach ($mails as $_mail) {
@@ -40,5 +40,6 @@ class mail_queueModel extends Model
                 //失败暂不处理
             }
         }
+		return count($mails);
     }
 }
