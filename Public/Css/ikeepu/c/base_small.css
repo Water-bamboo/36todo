@@ -1,0 +1,748 @@
+html,body,ul,li,ol,table,tr,td,form,p{
+	margin:0;
+	padding:0;
+}
+
+body{
+	font:12px/1.5 Arial,Tahoma,Helvetica,sans-serif;
+	background:url(../i/base/bg-body.jpg) repeat scroll 0 0 #F4F4F4;
+}
+
+body.a{
+	overflow:hidden;
+}
+
+ul,li{
+	list-style:none;
+}
+
+h1,h2,h3{
+	font-weight:default;
+	font-weight:normal;
+	margin:0;
+}
+
+h1{
+	font-size:22px;
+	padding:8px 0;
+}
+
+h2{
+	font-size:18px;
+	padding:6px 0;
+}
+
+h3{
+	font-size:14px;
+	padding:4px 0;
+}
+
+.group:after{
+	content:".";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden;
+}
+
+a{
+	text-decoration:none;
+	color:#333;
+}
+
+a[href*=""]{
+	*cursor:pointer;
+}
+
+a:hover{
+	text-decoration:underline;
+}
+
+a img{
+	border:none;
+}
+
+a.blue{
+	color:#369;
+}
+
+a.edit{
+	color:#999;
+}
+
+.page-loading{
+	padding:100px 0;
+	background:transparent url(../i/base/loading.gif) no-repeat scroll center center;
+}
+
+.part-loading{
+	padding:10px 35px;
+	color:#666;
+	background:transparent url(../i/base/loading-s.gif) no-repeat scroll 10px center;
+}
+
+.center{
+	text-align:center;
+}
+
+.nobody{
+	font-size:14px;
+	padding:10px 0 20px 0;
+	color:#666;
+	_clear:both;
+	_padding:5px 0 10px 0;
+}
+
+.nobody a{
+	text-decoration:underline;
+	color:#369;
+}
+
+.line{
+	background:transparent url(../i/base/bg-line.gif) repeat-x 0 bottom;
+	position:relative;
+}
+
+.line2{
+	background:transparent url(../i/base/bg-line2.gif) repeat-x 0 bottom;
+	position:relative;
+}
+
+div.pager{
+	padding:10px 0;
+	text-align:center;
+	font-size:14px;
+}
+
+div.pager a,div.pager span{
+	margin-left:10px;
+	color:#369;
+}
+
+div.pager span{
+	color:#666;
+}
+
+span.time,span.gray{
+	color:#999;
+}
+
+span.split{
+	padding:0 5px;
+	color:#666;
+}
+
+a.right-narrow{
+	background:url(../i/base/sp-base.png) no-repeat right 0;
+	display:inline-block;
+	padding-right:11px;
+}
+
+fieldset{
+	border:0 none;
+}
+
+input,button,a{
+	outline:none;
+}
+
+button:focus{
+	outline:none;
+}
+
+dl,dt,dd{
+	margin:0;
+	padding:0;
+}
+
+dl.formset{
+	padding:20px 0;
+	_zoom:1;
+}
+
+dt{
+	font-weight:bold;
+	font-size:14px;
+	color:#333;
+	padding-bottom:5px;
+}
+
+dd{
+	padding:10px 0;
+}
+
+dd input{
+	*height:26px;
+	*line-height:26px;
+	*padding:5px;
+}
+
+dd input[type=text],dd input[type=password],dd input.ipt,dd textarea{
+	margin-bottom:5px;
+	background-color:#FFF;
+	border:1px solid #3a81c0;
+	font-size:14px;
+	width:300px;
+	height:27px;
+	line-height:27px\9;
+	*height:24px;
+	*line-height:24px;
+	padding:5px;
+	color:#333;
+}
+
+dd textarea{
+	width:400px;
+	height:80px;
+	font-size:12px;
+}
+
+input.hint_blank,dd input.hint_blank,textarea.hint_blank,dd textarea.hint_blank{
+	color:#CCC;
+}
+
+dd input.error{
+	border:1px solid #F00;
+}
+
+dd span.meta{
+	display:block;
+	color:#999;
+}
+
+dd span.meta-error{
+	background:transparent url(../i/icon/tip.png) no-repeat scroll 0 -3px;
+	padding-left:20px;
+	color:#F00;
+}
+
+dd span.meta-success{
+	background:transparent url(../i/icon/tip.png) no-repeat scroll 0 -33px;
+	padding-left:20px;
+}
+
+dl.formset dd{
+	position:relative;
+	_zoom:1;
+	padding:0 0 20px 0;
+}
+
+dl.formsub dt{
+	float:left;
+	font-weight:normal;
+	padding:0 15px;
+	line-height:1.8;
+}
+
+dl.formsub dd{
+	margin-left:0;
+	padding:0 0 0 60px;
+}
+
+dl.formset dd.button{
+	padding-top:10px;
+}
+
+form div.field{
+	padding:8px;
+}
+
+form div.field input{
+	vertical-align:middle;
+}
+
+input,select,textarea{
+	font-family:inherit;
+	font-size:inherit;
+}
+
+input.main,button.main,a.button_main{
+	width:70px;
+	height:27px;
+	border:0 none;
+	color:#fff;
+	font-size:14px;
+	cursor:pointer;
+	padding:0;
+	padding-bottom:2px;
+}
+
+input.main,button.main,a.button_main{
+	background:transparent url(../i/base/sp-button.png) no-repeat scroll 0 0;
+}
+
+button.main{
+	padding:0\9\0;
+	*padding:0;
+}
+
+input.main:hover,button.main:hover,a.button_main:hover{
+	background-position:0 -28px;
+}
+
+a.button_main{
+	display:block;
+	text-align:center;
+	line-height:26px;
+}
+
+span.button button,span.button_big_main button,span.button_click button{
+	background:none repeat scroll 0 0 transparent;
+	border:0 none;
+	cursor:pointer;
+	display:block;
+	height:24px;
+	line-height:24px;
+	margin:0 -10px;
+	overflow:visible;
+	padding:0 10px;
+	text-decoration:none;
+	vertical-align:middle;
+	white-space:nowrap;
+	width:auto;
+}
+
+span.button_main,span.button_click,span.button_clicked,span.button_big_main,span.button_big_sub{
+	padding:0 10px 0 0;
+	background:transparent url(../i/base/sp-button.png) no-repeat scroll 100% -60px;
+	height:27px;
+	cursor:pointer;
+	display:inline-block;
+	vertical-align:middle;
+	margin:0 2px 0 0;
+}
+
+span.button_main span,span.button_click span,span.button_clicked span,span.button_big_main span,span.button_big_sub span{
+	background:transparent url(../i/base/sp-button.png) no-repeat scroll 0 -60px;
+	display:block;
+	padding:0 0 0 10px;
+	height:27px;
+	line-height:25px;
+	color:#fff;
+	font-size:14px;
+}
+
+span.button_main:hover{
+	background-position:100% -88px;
+}
+
+span.button_main:hover span{
+	background-position:0 -88px;
+}
+
+span.button_click{
+	background-position:100% -145px;
+}
+
+span.button_click span{
+	background-position:0 -145px;
+	color:#333;
+	font-size:12px;
+}
+
+span.button_clicked{
+	background-position:100% -117px;
+}
+
+span.button_clicked span{
+	background-position:0 -117px;
+	color:#666;
+	font-size:12px;
+}
+
+span.button_big_main,span.button_big_sub{
+	background-position:100% -174px;
+	height:34px;
+	padding-right:15px;
+	text-shadow:0 1px rgba(255,255,255,0.7);
+}
+
+span.button_big_main span,span.button_big_sub span{
+	background-position:0 -174px;
+	color:#333;
+	font-size:16px;
+	height:34px;
+	line-height:33px;
+	padding-left:18px;
+}
+
+span.button_big_main button{
+	height:31px;
+	font-size:16px;
+	text-shadow:0 1px rgba(255,255,255,0.7);
+}
+
+span.button_big_sub{
+	background-position:100% -213px;
+}
+
+span.button_big_sub span{
+	background-position:0 -213px;
+}
+
+span.button_click button{
+	color:#000;
+	text-shadow:0 1px rgba(255,255,255,0.7);
+	height:22px;
+}
+
+div.header{
+	width:100%;
+	min-width:960px;
+	height:42px;
+	z-index:200;
+	background:url(../i/base/bg-header.jpg) repeat-x center center;
+	position:fixed;
+}
+
+div.header .header-inner-box{
+	position:relative;
+	width:1000px;
+	margin:auto;
+}
+
+div.header h1{
+	display:block;
+	position:absolute;
+	left:0;
+	top:2px;
+	background:url(../i/base/logo.png) no-repeat;
+	width:96px;
+	height:37px;
+	padding:0;
+}
+
+div.header h1 a.logo{
+	height:100%;
+	display:block;
+	text-indent:-9999px;
+}
+
+div.header h1 a.event{
+	display:block;
+	width:50px;
+	height:25px;
+	background:url(../i/event/20120214.gif) no-repeat;
+	position:absolute;
+	left:100px;
+	top:10px;
+}
+
+div.header ul.nav{
+	padding-top:5px;
+	margin-left:130px;
+}
+
+div.header ul.nav li{
+	float:left;
+}
+
+div.header ul.nav li span.icons{
+	padding-left:20px;
+}
+
+div.header ul.nav li:first-child{
+	background:url(../i/base/sp-header.png) no-repeat -70px -40px;
+	height:31px;
+	width:61px;
+}
+
+div.header ul.nav li.middle{
+	background:url(../i/base/sp-header.png) no-repeat -141px -40px;
+	height:31px;
+	width:60px;
+}
+
+div.header ul.nav li.right{
+	background:url(../i/base/sp-header.png) no-repeat -211px -40px;
+	height:31px;
+	width:61px;
+}
+
+div.header ul.nav li a{
+	color:#fff;
+	display:block;
+	padding:6px 7px 7px 7px;
+	margin:1px 1px 1px 0;
+}
+
+div.header ul.nav li:first-child a{
+	margin-left:1px;
+}
+
+div.header ul.nav li a.actived,div.header .top ul.nav li a:active{
+	background:url(../i/base/sp-header.png) no-repeat 0 -40px;
+}
+
+div.header ul.nav li a:hover{
+	text-decoration:none;
+}
+
+div.header ul.nav li:first-child a:hover{
+	margin-left:1px;
+}
+
+div.header div.searchwrap{
+	float:left;
+	margin-left:10px;
+	background-position:right -135px;
+	width:150px;
+}
+
+div.header div.searchbar{
+	background-position:left -135px;
+}
+
+div.header span.icons{
+	display:block;
+	background:url(../i/icon/header.png) no-repeat;
+}
+
+div.header span.icon-home{
+	background-position:-4px -3px;
+}
+
+div.header span.icon-explore{
+	background-position:-4px -29px;
+}
+
+div.header span.icon-list{
+	background-position:-4px -54px;
+}
+
+div.header span.icon-group{
+	background-position:-4px -79px;
+}
+
+div.header span.icon-add{
+	background-position:-4px -104px;
+}
+
+div.header span.icon-menav{
+	background-position:-4px -128px;
+}
+
+div.header span.icon-tools{
+	background-position:-4px -153px;
+}
+
+div.header span.icon-message{
+	background-position:-4px -178px;
+}
+
+div.header span.icon{
+	display:block;
+	background:url(../i/icon/header.png) no-repeat;
+	height:18px;
+}
+
+div.header span.icon-narrow{
+	background-position:-4px -203px;
+}
+
+ul.navigate{
+	position:absolute;
+	right:0;
+	top:5px;
+}
+
+ul.navigate li.navigate-list{
+	float:left;
+	margin-left:15px;
+	position:relative;
+}
+
+ul.navigate li.navigate-list a{
+	display:block;
+	padding:7px 0;
+	color:#fff;
+}
+
+ul.navigate li.userwrap{
+	background:url(../i/base/sp-header.png) right 0 no-repeat;
+	padding-right:3px;
+	height:27px;
+	margin-top:2px;
+}
+
+ul.navigate ul.user-lists{
+	background:url(../i/base/sp-header.png) 0 0 no-repeat;
+	height:27px;
+}
+
+ul.navigate ul.user-lists li.user-list{
+	float:left;
+	line-height:27px;
+	margin-right:5px;
+}
+
+ul.navigate ul.user-lists li.user-list:first-child{
+	margin-right:8px;
+}
+
+ul.navigate ul.user-lists li.narrow{
+	margin-top:5px;
+	margin-right:0;
+}
+
+ul.navigate ul.user-lists li.user-list a{
+	padding:0;
+	display:block;
+}
+
+ul.navigate ul.user-lists li.user-list img{
+	width:25px;
+	height:25px;
+	padding:1px 0 1px 1px;
+}
+
+ul.navigate div.user-tipswrap{
+	background:url(../i/base/sp-header.png) no-repeat right -79px;
+	padding-right:6px;
+	height:16px;
+	position:absolute;
+	top:-5px;
+	right:-10px;
+}
+
+ul.navigate div.user-tipswrap a.user-tips{
+	display:block;
+	background:url(../i/base/sp-header.png) no-repeat 0 -79px;
+	height:16px;
+	line-height:15px;
+	color:#fff;
+	padding:0 0 0 6px;
+}
+
+ul.navigate div.user-tipswrap a:hover{
+	text-decoration:none;
+}
+
+div.mainer{
+	min-height:500px;
+	padding:42px 0 40px 0;
+}
+
+div.mainer div.container,div.footer div.container{
+	width:1000px;
+	margin:auto;
+}
+
+div.mainer div.pinboard-container{
+	margin-top:20px;
+}
+
+div.mainer div.page-container{
+	padding-top:40px;
+	width:900px;
+}
+
+div.main-sub,div.mains-sub{
+	padding-top:40px;
+	overflow:auto;
+}
+
+div.main-sub div.pmain{
+	width:680px;
+	float:left;
+	margin-right:20px;
+	display:inline;
+}
+
+div.mainer div.mains-sub{
+	width:920px;
+}
+
+div.mains-sub div.pmain{
+	width:580px;
+	float:left;
+	margin-right:40px;
+	display:inline;
+}
+
+div.main-sub div.psub,div.mains-sub div.psub{
+	width:300px;
+	float:right;
+	overflow:hidden;
+}
+
+div.mainer h1{
+	padding:0 0 20px 0;
+}
+
+div.mainer h2{
+	color:#369;
+	font-size:16px;
+}
+
+div.footer{
+	padding:20px 0;
+	color:#999;
+	text-align:center;
+}
+
+div.footer a{
+	color:#999;
+}
+
+
+
+a.sina,a.qq,a.sohu,a.douban,a.netease,a.kaixin,a.renren,span.icon_sina,span.icon_qq,span.icon_sohu,span.icon_douban,span.icon_netease,span.icon_kaixin,span.icon_renren{
+	padding:3px 0 2px 22px;
+	display:inline-block;
+	height:13px;
+	background:transparent url(../i/icon/share.png) scroll no-repeat 0 0;
+}
+
+a.sina:hover,a.qq:hover,a.sohu:hover,a.douban:hover,a.netease:hover,a.kaixin:hover,a.renren:hover{
+	text-decoration:none;
+}
+
+a.sina,span.icon_sina{
+	background-position:0 -2px;
+}
+
+a.qq,span.icon_qq{
+	background-position:0 -27px;
+}
+
+a.sohu,span.icon_sohu{
+	background-position:0 -102px;
+}
+
+a.douban,span.icon_douban{
+	background-position:0 -152px;
+}
+
+a.netease,span.icon_netease{
+	background-position:0 -127px;
+}
+
+a.kaixin,span.icon_kaixin{
+	background-position:0 -77px;
+}
+
+a.renren,span.icon_renren{
+	background-position:0 -53px;
+}
+
+a.sinalog,a.qqlog,a.sohulog,a.doubanlog{
+	background:transparent url(../i/icon/applog.png) scroll no-repeat 0 0;
+	display:block;
+	width:127px;
+	height:25px;
+	text-indent:-9999px;
+	overflow:hidden;
+}
+
+a.qqlog{
+	background-position:0 -29px;
+}
+
+a.sohulog{
+	background-position:0 -89px;
+}
+
+a.doubanlog{
+	background-position:0 -59px;
+}

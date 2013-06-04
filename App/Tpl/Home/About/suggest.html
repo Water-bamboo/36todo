@@ -1,0 +1,31 @@
+    <html>
+	
+     <head>
+	 
+       <title>36todo, 专注提醒</title>
+
+     </head>
+     <body>
+	 
+	 <include file="Public:header" /><br/>
+	 
+	 <div class="contont">
+		<H1>感谢提供建议或反馈</H1>
+		
+		<form method="post" action="__APP__/About/addsuggest" class="jNice">
+				<fieldset>
+					<p><label>标题：</label><input type="text" name="username" class="text-long" /></p>
+					<p><label>内容：</label><textarea name="password" class="text-long" rows="5" cols="50"></textarea></p>
+					<p><label>验证码：</label><input type="text" name="verify" class="text-small"/>
+						<img id="verify" alt="验证码" onClick="show()" src="__URL__/verify" align="absmiddle"><a href="javascript:show()">看不清楚</a>
+					</p>
+					<input type="submit" value="提交" class="button-submit"/>
+				</fieldset>
+		</form>
+	 </div>
+
+	<br/>
+	<include file="Public:footer" />
+	
+     </body>
+    </html>

@@ -1,0 +1,77 @@
+    <html>
+     <head>
+	   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+       <title>hello {$name}, Select Data</title>
+	   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+
+	   <script type="text/javascript">
+	   
+	   $(document).ready(function(){
+$("#btn1").click(function(){
+  alert("Text: " + $("#test").text());
+});
+$("#btn2").click(function(){
+  alert("HTML: " + $("#test").html());
+});
+
+$("a").click(function( event ){
+event.preventDefault();
+$( this ).hide();
+});
+});
+	   </script>
+	   
+     </head>
+     <body>
+        
+		<input type="checkbox" name="filter" value="tuijian">显示已完成</input>
+		<input type="checkbox" name="filter" value="tuijian" checked>显示完成</input>
+		<a href="http://jquery.com">Jquery</a>
+		<table border="1" align="center">
+        <tbody class="tbody">
+				<tr   bgcolor="#ff0000">
+					
+					<td>
+				    asfd
+					</td>
+		           
+           </tr>
+		   
+		   <tr   bgcolor="#00ff00">
+					
+					<td>
+				    asfd222
+					</td>
+		           
+           </tr>
+        </tbody>
+    </table>
+	
+		<?php
+// 设定要用的默认时区。自 PHP 5.1 可用
+date_default_timezone_set('UTC');
+
+
+// 输出类似：Monday
+echo date("l");
+echo "</br>";
+// 输出类似：Monday 15th of August 2005 03:12:46 PM
+echo date('l dS \of F Y h:i:s A'); echo "</br>";
+
+// 输出：July 1, 2000 is on a Saturday
+echo "July 1, 2000 is on a " . date("l", mktime(0, 0, 0, 7, 1, 2000));
+echo "</br>";
+
+/* 在格式参数中使用常量 */
+// 输出类似：Mon, 15 Aug 2005 15:12:46 UTC
+echo date(DATE_RFC822);
+echo "</br>";
+
+// 输出类似：2000-07-01T00:00:00+00:00
+echo date(DATE_ATOM, mktime(0, 0, 0, 7, 1, 2000));
+echo "</br>";
+?>
+
+		
+     </body>
+    </html>

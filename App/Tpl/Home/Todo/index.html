@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>36todo - 这是个会提醒的便签网，您的记忆助理</title>
+	<meta name="Keywords" content="36todo" />
+	<meta name="Description" content="" />
+	<link type="image/x-icon" href="/favicon.ico" rel="shortcut icon">
+   
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css">
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script
+
+	<script type="text/javascript" src="__PUBLIC__/Js/datime/jquery-ui-slide.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Js/datime/jquery-ui-timepicker-addon.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Js/customize/todos.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/datime/jquery-ui-timepicker-addon.css" />
+	<link type="text/css" rel="Stylesheet" href="__PUBLIC__/Css/customize/main.css" />
+
+	<link type="text/css" rel="stylesheet" href="__PUBLIC__/Css/ikeepu/c/base_small_todo_index.css" />
+ </head>
+
+<body>
+	<include file="Public:header" />
+
+	<div id="dialog" title="新增分类">
+		<label>名称：</label>
+		<form method='post' action='/36todo/index.php/Category/add_category/'>
+			<input type="text" name="name"/>
+			<button id="add_category">确定</button>
+		</form>
+	</div>
+
+	<div class="mainer"><br/>
+
+	<div class="container">
+		<button id="add">新增便签</button>&nbsp;&nbsp;<button id="opener">新增分类</button>
+		&nbsp;&nbsp;{//<a href="/36todo/index.php/Category/management">管理分类</a>}
+		隐藏已完成<input type="checkbox" name="filter" value="tuijian" {$_SESSION['hide_done']}/>
+
+		<?php if(count($data) > 0): ?>
+			<div class='td_span_remind'  style='text-align:right;'>
+				您有<strong>0</strong>条到期消息
+			</div>
+		<?php endif; ?>
+	</div>
+
+	<div class="container">
+		<?php if ($_SESSION['category_id'] == 0): ?>
+			默认组 | &nbsp;
+		<?php else: ?>
+			<a href="/36todo/index.php/Todo/index/catid/0">默认组</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+		<?php endif; ?>
+		<volist name="catdata" id="vo" key="k">
+				<?php if ($vo['id']==$_SESSION['category_id']): ?>
+					{$vo.name}
+					{//<img src="__PUBLIC__/Images/Home/drop_down.png" width="10" height="10"/>
+					<ul id="menu_cat" style="display:none">
+					<li><a href="#">重命名</a></li>
+					<li><a href="#">删除</a></li>
+					</ul>}
+					&nbsp;&nbsp;|&nbsp;&nbsp;
+				<?php else: ?>
+					<a href="/36todo/index.php/Todo/index/catid/{$vo.id}">{$vo.name}</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+				<?php endif; ?>
+		</volist>
+		<hr/>
+	</div>
+
+	<div class="container page-container">
+				<volist name="data" id="vo1" key="k">
+					<div class="item">
+						<div class="<if condition='$vo1.readiness eq 1'>deleted_item</if>"	id='{$vo1.id}'>
+						  [{$k}].&nbsp;&nbsp;
+						  <p class="content">{$vo1.body}</p>
+						</div>
+						
+						<div class='operation' style='text-align:right'>
+							提醒时间:
+							<?php if (!isset($vo1['remind_time'])): ?>
+								<input type='text' class='remind_time' name='<?php echo ($vo1['id']); ?>' value=''/>
+							<?php else: ?>
+								<input type='text' class='remind_time' name='<?php echo ($vo1['id']); ?>' value='<?php echo($vo1['remind_time']); ?>'/>
+							<?php endif; ?>
+							&nbsp;|&nbsp;
+
+							<if condition="$vo1.readiness eq 1"> 
+								<a href="__URL__/undone/id/{$vo1.id}" class="set_ready" title="取消完成">
+									<img class="imgicon" src="__PUBLIC__/Images/Home/checkbox_checked_icon.png"/>
+								</a>
+							<else />
+								<a href="__URL__/done/id/{$vo1.id}" class="set_ready" title="设为完成">
+									<img class="imgicon" src="__PUBLIC__/Images/Home/checkbox_unchecked_icon.png"/>
+								</a>
+							</if>							
+							&nbsp;|&nbsp;
+						    <a href="{$vo1.id}" class="edit_content" title='编辑便签'><img class="imgicon" src="__PUBLIC__/Images/Home/todo_edit.png"/></a>
+						    &nbsp;|&nbsp;
+						    <a href="__URL__/delete/id/{$vo1.id}" title='删除'><img class="imgicon" src="__PUBLIC__/Images/Home/remove.png"/></a>
+						</div>
+					</div>
+					<hr/>
+				</volist>
+		</div>
+		</div>
+		
+		<include file="Public:footer" />
+	
+     </body>
+    </html>

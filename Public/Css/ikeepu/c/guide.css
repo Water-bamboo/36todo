@@ -1,0 +1,535 @@
+div.welcome div.registerPanel{
+	padding:20px;
+	color:#666;
+	height:91px;
+}
+
+div.welcome div.registerPanel p{
+	font-size:16px;
+	color:#555;
+}
+
+div.welcome div.registerPanel div.register{
+	padding:10px 0 0;
+}
+
+div.welcome div.registerPanel div.register a{
+	color:#369;
+	margin-right:5px;
+}
+
+div.welcome div.whiteFillet{
+	margin-bottom:20px;
+}
+
+div.welcome div.pmain div.module h2,div.welcome div.pmain div.focusbox{
+	padding-left:5px;
+}
+
+div.welcome div.pmain div.whiteFillet{
+	margin-left:5px;
+	width:648px;
+}
+
+div.welcome div.loginPanel{
+	height:105px;
+	padding-top:20px;
+}
+
+div.welcome div.loginPanel input{
+	height:20px;
+	padding:2px;
+	width:190px;
+	border:1px solid #b2b2b2;
+}
+
+div.welcome div.loginPanel dd{
+	margin-bottom:5px;
+}
+
+div.welcome div.loginPanel dd span.button,div.welcome div.loginPanel dd a{
+	float:left;
+	margin-right:5px;
+}
+
+div.welcome div.loginPanel dd a{
+	margin-top:4px;
+}
+
+div.welcome ul.interests{
+	width:144px;
+	float:left;
+}
+
+div.welcome div.releasePanel span{
+	font-weight:bold;
+	color:#555;
+}
+
+div.welcome div.releasePanel p{
+	padding-bottom:5px;
+	color:#666;
+}
+
+div.linker div.container{
+	width:990px;
+	margin:auto;
+	color:#666;
+	padding-top:30px;
+	text-align:center;
+}
+
+div.linker div.container a{
+	margin-left:10px;
+	color:#666;
+}
+
+#pGuide{
+	padding:30px 0;
+	overflow:auto;
+}
+
+#pGuide div.avatar{
+	float:left;
+}
+
+#pGuide div.form_body{
+	padding:0 0 0 240px;
+}
+
+#pGuide div.form_body div.tab label{
+	font-size:14px;
+	margin-right:20px;
+}
+
+div.tab-guide{
+	height:30px;
+	position:relative;
+}
+
+div.tab-guide div{
+	position:absolute;
+	top:0;
+	height:40px;
+	line-height:35px;
+	font-size:14px;
+	color:#999;
+}
+
+div.tab-guide div span{
+	padding-left:40px;
+	display:block;
+	height:40px;
+	background:transparent url(../i/guide/guide.png) no-repeat scroll 0 0;
+}
+
+div.tab-guide span.active{
+	color:#333;
+}
+
+div.tab-guide div.s1{
+	left:-7px;
+}
+
+div.tab-guide div.s2{
+	left:50%;
+}
+
+div.tab-guide div.s3{
+	right:10px;
+}
+
+div.tab-guide div.s2 span{
+	background-position:-160px -46px;
+}
+
+div.tab-guide div.s2 span.active{
+	background-position:0 -46px;
+}
+
+div.tab-guide div.s3 span{
+	background-position:-160px -91px;
+}
+
+div.tab-guide div.s3 span.active{
+	background-position:0 -91px;
+}
+
+#pGuide .select-tag{
+	float:left;
+	width:400px;
+}
+
+#pGuide .select-tag ul{
+	overflow:auto;
+}
+
+#pGuide .select-tag ul li{
+	width:62px;
+	height:90px;
+	float:left;
+	margin:20px 35px 0 0;
+	text-align:center;
+	color:#666;
+	font-size:14px;
+	line-height:1.5;
+	cursor:pointer;
+}
+
+div.select-tag ul li .icon{
+	background:transparent url(../i/guide/guide2.gif) no-repeat scroll -2px -6px;
+	display:block;
+	width:62px;
+	height:62px;
+}
+
+div.select-tag li.active .c1{
+	background-position:-5px -78px;
+}
+
+div.select-tag li.active .c2{
+	background-position:-80px -78px;
+}
+
+div.select-tag li.active .c3{
+	background-position:-154px -79px;
+}
+
+div.select-tag li.active .c4{
+	background-position:-229px -79px;
+}
+
+div.select-tag li.active .c5{
+	background-position:-5px -159px;
+}
+
+div.select-tag li.active .c6{
+	background-position:-80px -159px;
+}
+
+div.select-tag li.active .c7{
+	background-position:-154px -159px;
+}
+
+div.select-tag li.active .c8{
+	background-position:-229px -159px;
+}
+
+div.select-tag li.active .c9{
+	background-position:-2px -237px;
+}
+
+div.select-tag li.active .c10{
+	background-position:-79px -236px;
+}
+
+div.select-tag li.active .c11{
+	background-position:-154px -237px;
+}
+
+div.select-tag li.active .c12{
+	background-position:-229px -237px;
+}
+
+div.select-tag li.active .c13{
+	background-position:-2px -316px;
+}
+
+div.select-tag li.active .c14{
+	background-position:-80px -316px;
+}
+
+div.select-tag li.active .c15{
+	background-position:-154px -315px;
+}
+
+div.select-tag li.active .c16{
+	background-position:-229px -316px;
+}
+
+#pGuide .select-user{
+	float:right;
+	width:450px;
+	height:470px;
+}
+
+#pGuide .select-user ul{
+	background:#fff;
+	height:400px;
+	overflow:auto;
+	position:relative;
+}
+
+#pGuide .select-user ul li{
+	overflow:auto;
+	padding:10px;
+	border-bottom:1px solid #CCC;
+	position:relative;
+}
+
+#pGuide .select-user ul li p.user{
+	margin:0 60px 0 80px;
+	color:#666;
+	font-size:14px;
+}
+
+#pGuide .select-user ul li p.tag{
+	margin:5px 60px 0 80px;
+}
+
+#pGuide .select-user ul li a.username{
+	display:block;
+	font-size:14px;
+}
+
+#pGuide .select-user ul li p.opt{
+	position:absolute;
+	right:10px;
+	top:40%;
+}
+
+#pGuide .select-user ul li p.opt label{
+	cursor:pointer;
+}
+
+#pGuide .select-user div.next{
+	text-align:right;
+	padding-top:10px;
+}
+
+#guideFinish{
+	padding:20px 0;
+}
+
+#guideFinish h2{
+	padding:30px 0;
+}
+
+#guideFinish h3{
+	padding:20px 0 10px 0;
+}
+
+#guideFinish p{
+	padding-bottom:10px;
+	font-size:14px;
+}
+
+#guideFinish p a{
+	color:#369;
+}
+
+#guideFinish .tools{
+	height:80px;
+}
+
+#guideFinish .tools div.item{
+	background:#fff url(../i/guide/sp-guide.gif) no-repeat scroll 0 0;
+	color:#333;
+	float:left;
+	height:69px;
+	margin-right:20px;
+	padding-left:65px;
+	width:155px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	-khtml-border-radius:5px;
+	border-radius:5px;
+}
+
+#guideFinish .tools div.chrome{
+	background-position:0 0;
+}
+
+#guideFinish .tools div.book{
+	background-position:0 -207px;
+}
+
+#guideFinish .tools div.safari{
+	background-position:0 -138px;
+}
+
+#guideFinish .tools div.firefox{
+	background-position:0 -70px;
+}
+
+#guideFinish .tools div.item h4{
+	padding:8px 0;
+	margin:0;
+	font-size:14px;
+	font-weight:normal;
+}
+
+#guideFinish .tools div.book h4{
+	padding-bottom:4px;
+}
+
+#guideFinish .tools div.item a{
+	color:#369;
+}
+
+#guideFinish.tools div.item span{
+	font-size:14px;
+}
+
+#guideFinish .tools div.item span.s{
+	font-size:12px;
+}
+
+#pRegister div.sugg,#pRegister div.regapp,#pLogin div.regapp{
+	position:absolute;
+	top:20px;
+	left:500px;
+	padding:10px;
+}
+
+#pRegister div.sugg{
+	background:#fff;
+	font-size:14px;
+	line-height:1.5;
+	color:#666;
+	top:250px;
+}
+
+#pRegister div.sugg p{
+	padding-left:80px;
+}
+
+#pRegister div.sugg p a,#pRegister div.sugg p strong{
+	padding:0 2px;
+	color:#369;
+}
+
+#pRegister div.regapp,#pLogin div.regapp{
+	padding:5px 0 30px;
+}
+
+#pRegister div.regapp h3,#pLogin div.regapp h3{
+	color:#369;
+	font-size:16px;
+}
+
+#pRegister div.regapp a,#pLogin div.regapp a{
+	display:block;
+	margin:5px 0;
+}
+
+#pLogin,#pRegister{
+	position:relative;
+}
+
+#index_slide_show{
+	position:relative;
+	overflow:hidden;
+	width:648px;
+	height:248px;
+	padding:5px;
+	background:#F8F8F8;
+}
+
+#index_slide_show ol{
+	width:640px;
+	height:240px;
+	padding:3px;
+	border:1px solid #DDD;
+	background:#FFF;
+	overflow:hidden;
+}
+
+#index_slide_show ol li{
+	overflow:hidden;
+}
+
+#index_slide_show ol li img{
+	width:640px;
+	height:240px;
+}
+
+#index_slide_show .bg_line{
+	z-index:2;
+	position:absolute;
+	width:640px;
+	height:30px;
+	top:220px;
+	right:9px;
+	background-color:#000;
+	filter:Alpha(opacity=5);
+	-moz-opacity:.5;
+	opacity:.5;
+}
+
+#index_slide_show .switch_btn{
+	z-index:3;
+	position:absolute;
+	width:640px;
+	height:25px;
+	padding-top:5px;
+	top:220px;
+	right:9px;
+}
+
+#index_slide_show ul li{
+	position:relative;
+	overflow:hidden;
+}
+
+#index_slide_show ul li.left{
+	float:left;
+	width:320px;
+	line-height:14px;
+	padding:3px 0 0 10px;
+	font-size:14px;
+	color:#FFF;
+}
+
+#index_slide_show ul li.left span{
+	display:none;
+}
+
+#index_slide_show ul li.right{
+	float:right;
+}
+
+#index_slide_show ul li.right p{
+	display:block;
+	float:left;
+	height:19px;
+	width:19px;
+	margin-right:10px;
+	cursor:pointer;
+	font-size:0;
+	background:url(../i/base/slideshow_switch_icon.png) no-repeat -22px 0;
+}
+
+#index_slide_show ul li p.on{
+	background:url(../i/base/slideshow_switch_icon.png) no-repeat 0 0;
+}
+
+.index_user_info_pannel{
+	height:40px;
+}
+
+.index_user_info_pannel div.left{
+	position:relative;
+	float:left;
+}
+
+.index_user_info_pannel div.right{
+	position:relative;
+	float:right;
+}
+
+
+div.browser-tip a{
+	background-color:#fff;
+	border-radius:3px 3px 3px 3px;
+	display:block;
+	padding:7px 10px 5px 10px;
+}
+
+div.browser-tip span.icons{
+	height:50px;
+	display:block;
+	line-height:20px;
+	padding-top:5px;
+	font-size:14px;
+}

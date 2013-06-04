@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>登录 -36todo - 便签，这是个会提醒的便签网</title>
+    <meta name="Keywords" content="36todo" />
+    <meta name="Description" content="" />
+    <link type="image/x-icon" href="/favicon.ico" rel="shortcut icon">
+    <link type="text/css" rel="Stylesheet" href="__PUBLIC__/Css/ikeepu/c/base_small.css" />
+	<link type="text/css" rel="Stylesheet" href="__PUBLIC__/Css/ikeepu/c/guide_small.css" />
+</head>	
+<body>
+
+
+<include file="Public:header" />
+
+
+<div class="mainer">
+<div class="container page-container">
+
+
+<h1>验证邮箱</h1>
+<div id="pLogin">
+    <form id="J_findpwd_form" action="{:U('findpwd/index')}" method="post">
+		<div class="lg_name clearfix">
+			<span>用户名：</span>
+			<input type="text" name="username" id="J_name" class="input_text" maxlength="20">
+		</div>
+		<div class="lg_chk clearfix"> 
+			<span>请输入验证码：</span>
+			<input type="text" name="captcha" id="J_captcha" class="input_text" maxlength="10">
+			<img src="{:U('captcha/index', array('t'=>time()))}" id="J_captcha_img" class="captcha_img" alt="{:L('captcha')}" data-url="{:U('captcha/index')}">
+			<a href="javascript:;" id="J_captcha_change">看不清换一张</a>
+		</div>
+		<div class="lg_login">
+			<input type="submit" value="下一步" class="sub">
+		</div>
+		<?php //echo(C('pin_site_name')); ?>
+	</form>
+    <!--<div class="regapp">
+        <h3>用合作账号登陆</h3>
+        <div>
+            <a href="#/account/loginapp?app=sina" class="sinalog">新浪微博账号</a>
+	        <a href="#/account/loginapp?app=qq" class="qqlog">腾讯微博账号</a>
+	        <a href="#/account/loginapp?app=sohu" class="sohulog">搜狐微博账号</a>
+	        <a href="#/account/loginapp?app=douban" class="doubanlog">豆瓣账号</a>
+        </div>-->
+    </div>
+</div>
+</div>
+</div>
+
+<include file="Public:footer" />
+
+</body>
+</html>

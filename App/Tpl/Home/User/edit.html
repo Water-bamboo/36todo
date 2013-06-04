@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>用户信息 -36todo - 便签，这是个会提醒的便签网</title>
+    <meta name="Keywords" content="36todo" />
+    <meta name="Description" content="" />
+    <link type="image/x-icon" href="/favicon.ico" rel="shortcut icon">
+    <link type="text/css" rel="Stylesheet" href="__PUBLIC__/Css/ikeepu/c/base_small.css" />
+	<link type="text/css" rel="Stylesheet" href="__PUBLIC__/Css/ikeepu/c/guide_small.css" />
+</head>	
+<body>
+
+
+<include file="Public:header" />
+
+<div class="mainer">
+<div class="container page-container">
+
+<h1>个人资料</h1>
+	<h2>您的基础信息</h2>
+	<dl class="formset">
+		<h3>登 录 邮 箱： {$result.mail} <?php if ($result['infoverified'] == 0): ?><a href="__APP__/findpwd/index">未验证邮箱</a><?php else: ?>已验证<?php endif; ?></h3>
+		<h3>手 机 号 码： {$result.userphone}</h3>
+		<h3>上 次 登 录： {$result.ctime}</h3>
+	</dl>
+
+	<h2>您的安全服务</h2>
+	<dl class="formset">
+		<h3>登 录 密 码： 安全性高的密码可以使账号更安全。建议您定期。<a href="__APP__/User/changepwd" style="color:#3333FF">修改密码</a></h3>
+		<h3>手 机 绑 定： </h3>
+		<h3>邮 箱 绑 定： </h3>
+	</dl>
+
+</div>
+</div>
+<include file="Public:footer" />
+
+</body>
+</html>

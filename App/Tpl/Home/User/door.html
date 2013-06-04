@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>登录、注册</title>
+
+<style type="text/css">
+#register {
+	float:right;
+	width:500px; 
+	height:100%;
+ }
+ 
+#login { 
+	float:left;
+	width:500px; 
+	height:100%;
+}
+	
+</style>
+
+</head>
+<body>
+
+		<div id="login">
+			  <form method="post" action="/36todo/index.php/User/insert" class="jNice">					
+					<h3>注册</h3>
+                    	<fieldset>
+                        	<p><label>账户名：</label><input type="text" name="username" class="text-long" /></p>
+							<p><label>登录密码：</label><input type="password" name="password" class="text-long" /></p>
+							<p><label>确认密码：</label><input type="password" name="repassword" class="text-long" /></p>
+							<p><label>验证码：</label><input type="text" name="verify" class="text-small"/>
+							<img id="verify" alt="验证码" onClick="show()" src="__URL__/verify" align="absmiddle"><a href="javascript:show()">看不清楚</a></p>
+                        	<!--<p><label>邮箱:</label><input type="text" name="mail" class="text-long" /></p>
+                            <p><label>Current City:</label>
+                            <select name="city">
+                            	<option>上海</option>
+                            	<option>北京</option>
+                            	<option>杭州</option>
+                            	<option>南京</option>
+                            	<option>厦门</option>
+                            	<option>苏州</option>
+                            </select>
+                            </p> -->
+                        	<!--<p><label>Sample label:</label><textarea rows="1" cols="1"></textarea></p>-->
+                            <input type="submit" value="同意协议并注册" class="button-submit"/>
+                        </fieldset>
+                </form>
+		 </div>
+		 
+		 <div id="register">
+			<h3>登录</h3>
+			 <form name="myform" action="/36todo/index.php/User/checklogin" method="post">
+                        <table cellSpacing="0" cellPadding="0" width="100%" border="0" height="190">
+                          <tr>
+                            <td class="left_txt">账户名：</td> 
+							<td><input name="username" class="editbox4" value="" size="19"></td>                           
+                          </tr>
+                          <tr>
+                            <td class="left_txt">密&nbsp;&nbsp;&nbsp;&nbsp;码：</td>
+							<td><input class="editbox4" type="password" size="20" name="password"></td>                            
+                          </tr>
+						  <tr>
+						  	<td></td>
+							<td><input type="checkbox" checked="checked"/>记住我的登录状态</td>
+						  </tr>
+                          <tr>			
+						  	<td></td>			  	
+                            <td>
+								<input name="Submit" type="submit" class="btn5" value="登录"> 	
+								<a style="margin-left:10px" href="#">忘记密码?</a>
+							</td>				
+                          </tr>
+                        </table>
+                        <br>
+             </form>
+		 </div>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+#pRegister div.sugg,#pRegister div.regapp,#pLogin div.regapp{
+	position:absolute;
+	top:20px;
+	left:500px;
+	padding:10px;
+}
+
+#pRegister div.sugg{
+	background:#fff;
+	font-size:14px;
+	line-height:1.5;
+	color:#666;
+	top:250px;
+}
+
+#pRegister div.sugg p{
+	padding-left:80px;
+}
+
+#pRegister div.sugg p a,#pRegister div.sugg p strong{
+	padding:0 2px;
+	color:#369;
+}
+
+#pRegister div.regapp,#pLogin div.regapp{
+	padding:5px 0 30px;
+}
+
+#pRegister div.regapp h3,#pLogin div.regapp h3{
+	color:#369;
+	font-size:16px;
+}
+
+#pRegister div.regapp a,#pLogin div.regapp a{
+	display:block;
+	margin:5px 0;
+}
+
+#pLogin,#pRegister{
+	position:relative;
+}

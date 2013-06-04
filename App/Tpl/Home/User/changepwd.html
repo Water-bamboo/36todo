@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>修改密码 -36todo - 便签，这是个会提醒的便签网</title>
+    <meta name="Keywords" content="36todo" />
+    <meta name="Description" content="" />
+    <link type="image/x-icon" href="/favicon.ico" rel="shortcut icon">
+    <link type="text/css" rel="Stylesheet" href="__PUBLIC__/Css/ikeepu/c/base_small.css" />
+	<link type="text/css" rel="Stylesheet" href="__PUBLIC__/Css/ikeepu/c/guide_small.css" />
+</head>	
+<body>
+
+
+<include file="Public:header" />
+
+
+<div class="mainer">
+<div class="container page-container">
+
+
+<h1>修改密码</h1>
+	<div id="pForgot">
+    <form action="__APP__/User/updatepwd" method="post" name="myform" onSubmit="return check_all()">
+		<input type="hidden" name="id" value="{$result.id}">
+		<input type="hidden" name="oldpwd" value="{$result.password}">
+	    <dl class="formset">
+			<dt>旧密码:</dt>
+		    <dd>
+				<input type="password" name="userpwd" onblur="resetp(this)"/>
+				<span id="pold" style="color:blue;font-size:12px;"></span>
+			</dd>
+		    <dt>新密码:</dt>
+		    <dd>
+				<input type="password" name="password" onblur="resetp1(this)"/>
+				<span id="p1" style="color:blue;font-size:12px;"></span>
+			</dd>
+			<dt>确认密码:</dt>
+		    <dd>
+				<input type="password" name="repassword" onblur="resetp2(this,document.myform.password)"/>
+				<span id="p2" style="color:blue;font-size:12px;"></span>
+			</dd>
+		    <dd class="button">
+			    <button type="submit" class="main">确 认</button>
+		    </dd>
+	    </dl>
+    </form>	
+  	</div>
+
+</div>
+</div>
+
+<include file="Public:footer" />
+
+</body>
+<script type="text/javascript"> 
+	var pwdflag=false;
+	var pwd2flag=false;
+	
+	<!--验证密码--> 
+	function resetp(obj){  
+		var zhi=document.getElementById('pold');  
+		if(obj.value.length=="0"){   
+			zhi.innerHTML='请输入您的密码~';   
+			//return pwdflag;   exit;  
+		}else if(obj.value.length<5 || obj.value.length>15){
+			zhi.innerHTML='密码长度的要求是5~15位之间~';  
+		}else{   
+			zhi.innerHTML='√';   
+			//return true;
+			pwdflag=true;    
+		}  
+	}  
+	
+	<!--验证密码--> 
+	function resetp1(obj){  
+		var zhi=document.getElementById('p1');  
+		if(obj.value.length=="0"){   
+			zhi.innerHTML='请输入您的密码~';   
+			//return pwdflag;   exit;  
+		}else if(obj.value.length<5 || obj.value.length>15){
+			zhi.innerHTML='密码长度的要求是5~15位之间~';  
+		}else{   
+			zhi.innerHTML='√';   
+			//return true;
+			pwdflag=true;    
+		}  
+	}  
+	<!--判断两次密码是否一致--> 
+	function resetp2(obj,obj2){ 
+		var repwd=document.getElementById('p2');  
+		repwd.innerHTML=''; 
+
+		if(obj.value!=obj2.value){
+			repwd.innerHTML='两次密码不一致~';
+			//return pwd2flag;
+ 			//exit;
+		}else if(obj.value.length<5 || obj.value.length>15){
+			repwd.innerHTML='请输入您的新密码~';  
+		}else{
+			repwd.innerHTML='√';    
+ 			pwd2flag=true;
+		} 
+	}
+	function check_all(){
+		if(pwdflag&&pwd2flag){
+			return true;
+		}else{
+			return false;
+		}
+	} 
+</script>
+</html>

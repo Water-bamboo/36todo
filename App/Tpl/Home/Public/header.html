@@ -1,0 +1,18 @@
+<div class="header">	
+	 <div class="header-inner-box">
+	 <h1><a class="logo" href="__APP__/Todo" title="wish i todo u">便签网</a></h1>
+	 <ul class="nav">
+        <li><a href="__APP__/Todo"><span class="icons icon-home">首页</span></a></li>  
+    </ul>
+		<ul class="navigate">
+		
+		 <?php if (isset($_SESSION['member'])):  ?>
+			<li class="navigate-list"><a href="__APP__/User/edit"><?php echo($_SESSION['member']); ?></a></li>
+			<li class="navigate-list"><a href="__APP__/User/logout/">退 出</a></li>
+		<?php  else:  ?>
+			<li class="navigate-list"><a href="__APP__/User/register">注册</a></li>
+			<li class="navigate-list"><a href="__APP__/User/login">登录</a></li>
+		<?php endif; ?>
+		</ul>
+	</div>
+</div>

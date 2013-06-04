@@ -1,0 +1,629 @@
+.iku-popup,.iku-popup div{
+	display:block;
+	border:0;
+	margin:0;
+	overflow:visible;
+	padding:0;
+	position:static;
+}
+
+div.iku-popup{
+	font-family:Tahoma,Verdana,Arial,sans-serif;
+	font-size:12px;
+	z-index:2147483647;
+	position:fixed;
+	_position:absolute;
+	top:-10px;
+	left:0;
+	height:0;
+	width:100%;
+	font-size:12px;
+	text-align:left;
+}
+
+div.iku-popup ul,div.iku-popup li{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+div.iku-mask{
+	position:fixed;
+	_position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background-color:#FFF;
+	z-index:1;
+	display:none;
+}
+
+div.iku-pop{
+	margin:auto;
+	z-index:2;
+	_left:50%;
+	_margin-left:-300px;
+}
+
+div.iku-pop,div.iku-body{
+	position:relative;
+}
+
+div.iku-pop,div.iku-body,div.iku-corner{
+	overflow:visible;
+}
+
+div.iku-corner{
+	_display:none;
+	position:static;
+}
+
+div.iku-corner span.iku-tl,div.iku-corner span.iku-tr,div.iku-corner span.iku-br,div.iku-corner span.iku-bl{
+	display:block;
+	position:absolute;
+}
+
+div.iku-corner .iku-tl{
+	width:100%;
+	height:100%;
+}
+
+div.iku-corner .iku-tr{
+	width:16px;
+	height:16px;
+	right:-16px;
+}
+
+div.iku-corner .iku-br{
+	width:100%;
+	right:-16px;
+	height:100%;
+	bottom:-16px;
+}
+
+div.iku-corner .iku-bl{
+	left:0;
+	width:16px;
+	height:16px;
+	bottom:-16px;
+}
+
+div.iku-pop div.iku-panel,div.iku-body div.iku-content{
+	overflow:visible;
+	position:relative;
+	_zoom:1;
+	padding:28px 10px 10px 10px;
+}
+
+div.iku-body div.iku-content{
+	padding-left:20px;
+	padding-right:20px;
+	_background-color:#f3f3f3;
+}
+
+div.iku-pop div.iku-tip{
+	overflow:visible;
+	padding:0 20px;
+	display:none;
+	position:relative;
+}
+
+div.iku-pop div.iku-panel{
+	_background-color:#ebebeb;
+	_border:1px solid #aaa;
+}
+
+div.iku-loading{
+	background:transparent url(../i/popup/pop-loading.gif) no-repeat scroll center center;
+	height:30px;
+}
+
+div.iku-ajax{
+	height:50px;
+	background:transparent url(../i/popup/loading.gif) no-repeat scroll center center;
+}
+
+div.iku-pop em{
+	background:transparent url(../i/popup/close.gif) no-repeat scroll 0 0;
+	cursor:pointer;
+	display:block;
+	height:14px;
+	position:absolute;
+	top:23px;
+	right:0;
+	_right:10px;
+	width:14px;
+}
+
+div.iku-pop em:hover{
+	background-position:0 -14px;
+}
+
+div.iku-pop .iku-login{
+	text-align:center;
+	font-size:14px;
+	padding:5px;
+}
+
+div.iku-tab{
+	z-index:2;
+	position:absolute;
+	left:50%;
+	margin-left:-79px;
+	_display:inline;
+}
+
+div.iku-tab ul{
+	background:transparent url(../i/popup/pop-tab.png) repeat-x scroll 0 0;
+	height:26px;
+	overflow:hidden;
+	_width:178px;
+}
+
+div.iku-tab ul li{
+	height:26px;
+	line-height:26px;
+	cursor:pointer;
+	float:left;
+	width:auto;
+}
+
+div.iku-tab ul li span,div.iku-tab ul li a{
+	border-right:1px solid #3a8ea3;
+	padding:0 12px;
+	display:block;
+	font-size:12px;
+	font-weight:bold;
+	color:#333;
+	margin:0;
+}
+
+.iku-tab ul li.iku-last span{
+	border:0;
+}
+
+.iku-tab ul li.iku-first{
+	background:transparent url(../i/popup/pop-tab.png) no-repeat scroll left -26px;
+}
+
+.iku-tab ul li.iku-last{
+	background:transparent url(../i/popup/pop-tab.png) no-repeat scroll right -52px;
+}
+
+.iku-tab ul li.iku-active{
+	background:transparent url(../i/popup/pop-tab.png) repeat-x scroll 0 -78px;
+}
+
+.iku-tab ul li.iku-active.iku-first{
+	background:transparent url(../i/popup/pop-tab.png) no-repeat scroll left -104px;
+}
+
+.iku-tab ul li.iku-active.iku-first span{
+	margin-left:10px;
+	padding-left:2px;
+	background:transparent url(../i/popup/pop-tab.png) repeat-x scroll 0 -78px;
+}
+
+.iku-tab ul li.iku-active.iku-last{
+	background:transparent url(../i/popup/pop-tab.png) no-repeat scroll right -130px;
+}
+
+.iku-tab ul li.iku-active.iku-last span{
+	margin-right:10px;
+	padding-right:2px;
+	background:transparent url(../i/popup/pop-tab.png) repeat-x scroll 0 -78px;
+}
+
+.iku-tab ul li.iku-title{
+	background:transparent url(../i/popup/pop-title.gif) no-repeat scroll 0;
+	text-align:center;
+	width:105px;
+	line-height:25px;
+}
+
+.iku-tab ul li.iku-title span{
+	color:#666;
+}
+
+.iku-tab ul li.iku-title span{
+	border:none;
+}
+
+.iku-icon a{
+	text-indent:-99999px;
+	overflow:hidden;
+	background:transparent url(../i/popup/pop-icon.png) no-repeat scroll center 2px;
+}
+
+.iku-pop .iku-corner .iku-tl{
+	background:transparent url(../i/popup/pop-1.png) scroll no-repeat 0 0;
+}
+
+.iku-pop .iku-corner .iku-tr{
+	background:transparent url(../i/popup/pop-1.png) scroll no-repeat 100% 0;
+}
+
+.iku-pop .iku-corner .iku-br{
+	background:transparent url(../i/popup/pop-1.png) scroll no-repeat 100% 100%;
+}
+
+.iku-pop .iku-corner .iku-bl{
+	background:transparent url(../i/popup/pop-1.png) scroll no-repeat 0 100%;
+}
+
+.iku-body .iku-corner .iku-tl{
+	background:#f3f3f3 url(../i/popup/pop-2.png) scroll no-repeat 0 0;
+}
+
+.iku-body .iku-corner .iku-tr{
+	background:#f3f3f3 url(../i/popup/pop-2.png) scroll no-repeat 100% 0;
+}
+
+.iku-body .iku-corner .iku-br{
+	background:#f3f3f3 url(../i/popup/pop-2.png) scroll no-repeat 100% 100%;
+}
+
+.iku-body .iku-corner .iku-bl{
+	background:#f3f3f3 url(../i/popup/pop-2.png) scroll no-repeat 0 100%;
+}
+
+div.iku-body{
+	margin:10px 20px;
+	z-index:1;
+}
+
+div.iku-content{
+	padding-top:28px;
+	color:#9a9a9a;
+}
+
+div.iku-nobody{
+	margin:auto;
+	text-align:center;
+	font-size:12px;
+	line-height:1.5;
+}
+
+div.iku-nobody a{
+	color:#369;
+}
+
+div.iku-bottom{
+	padding:10px 13px 0 20px;
+	text-align:right;
+	overflow:hidden;
+}
+
+.iku-b-submit,.iku-b-close{
+	width:74px;
+	height:24px;
+	border:0 none;
+	cursor:pointer;
+	padding:0;
+	_zoom:1;
+}
+
+.iku-b-close{
+	background:#ebebeb url(../i/popup/button-sub.png) scroll no-repeat 0 0;
+	_background:#ebebeb url(../i/popup/button-sub.gif) scroll no-repeat 0 0;
+	_zoom:1;
+}
+
+.iku-b-submit{
+	background:#ebebeb url(../i/popup/button-main.gif) scroll no-repeat 0 0;
+}
+
+.iku-group:after{
+	content:".";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden;
+}
+
+.iku-form{
+	font-weight:bold;
+}
+
+.iku-content iframe{
+	border:0 none;
+}
+
+.iku-form input{
+	background-color:#FFF;
+	background-image:none;
+	border:1px solid #e2e1e1;
+	margin-top:5px;
+	color:#333;
+	font-weight:default;
+	padding:3px;
+	font-size:12px;
+	position:static;
+	float:none;
+	vertical-align:middle;
+}
+
+.iku-form textarea,.iku-form select{
+	border:1px solid #e2e1e1;
+}
+
+.iku-form label{
+	display:block;
+	float:none;
+	width:auto;
+	line-height:auto;
+	height:auto;
+}
+
+.iku-form-main,.iku-form-meta{
+	text-align:left;
+}
+
+.iku-form-img{
+	float:left;
+	width:160px;
+	height:128px;
+	padding:4px;
+	padding:16px 0;
+	background-color:#CCC;
+}
+
+div.iku-form-set{
+	padding-left:180px;
+	overflow:visible;
+}
+
+div.iku-form-title{
+	border-bottom:1px solid #e4e2e2;
+	line-height:1.7;
+	height:25px;
+	font-weight:bold;
+	color:#2a718e;
+	position:relative;
+	overflow:hidden;
+}
+
+div.iku-form-title em{
+	background:transparent url(../i/popup/edit.gif) no-repeat scroll 0 0;
+	width:13px;
+	height:13px;
+	top:3px;
+}
+
+div.iku-form-title em:hover{
+	background-position:0 -13px;
+}
+
+div.iku-form-cate{
+	position:relative;
+	_zoom:1;
+}
+
+div.iku-form-cate em{
+	background:transparent url(../i/popup/edit.gif) no-repeat scroll -16px 0;
+	width:13px;
+	height:13px;
+	top:30px;
+	right:30px;
+}
+
+div.iku-form-cate em:hover{
+	background-position:-16px -13px;
+}
+
+div.iku-form-cate,div.iku-form-tag{
+	padding-top:10px;
+	*position:relative;
+}
+
+div.iku-form-tag input{
+	width:80%;
+}
+
+div.iku-form-cate select{
+	width:82%;
+	_width:200px;
+	display:block;
+}
+
+div.iku-form-priv,div.iku-form-sync{
+	padding-top:5px;
+	position:relative;
+	*margin-top:5px;
+}
+
+div.iku-form-priv label,div.iku-form-sync label{
+	display:inline;
+	cursor:pointer;
+}
+
+div.iku-form-priv input,div.iku-form-sync input{
+	display:inline;
+	_padding:0;
+	_margin:0;
+	_border:0;
+	background:none;
+	border:0;
+}
+
+div.iku-form-sync label{
+	padding-right:2px;
+	font-weight:normal;
+}
+
+div.iku-form-sync span{
+	font-weight:normal;
+}
+
+div.iku-form-sync span a{
+	text-decoration:underline;
+	color:#9a9a9a;
+}
+
+span.iku-form-rectag{
+	margin-top:2px;
+	display:block;
+	*margin-top:20px;
+}
+
+span.iku-form-rectag a{
+	color:#2A718E;
+}
+
+div.iku-form-meta{
+	padding-left:3px;
+	padding-top:5px;
+}
+
+div.iku-form-meta textarea{
+	width:98%;
+	height:65px;
+	font-size:12px;
+}
+
+div.iku-form-title input{
+	margin-top:0;
+	width:90%;
+	border:1px solid #2a718e;
+}
+
+.iku-success{
+	color:#666;
+	text-align:center;
+}
+
+.iku-success a{
+	color:#333;
+	text-decoration:underline;
+}
+
+div.iku-popup div.iku-tagSelector{
+	width:255px;
+	margin-top:-50px;
+	_top:190px;
+	left:200px;
+}
+
+.iku-popup div.iku-tagSelector{
+	position:absolute;
+	background:#fff;
+	padding:10px 2px 5px 5px;
+	z-index:100;
+	border:1px solid #CCC;
+}
+
+div.iku-tagSelector em{
+	background:transparent url(../i/popup/close.gif) no-repeat scroll 0 0;
+	cursor:pointer;
+	display:block;
+	height:14px;
+	position:absolute;
+	top:2px;
+	right:3px;
+	_right:3px;
+	width:14px;
+}
+
+div.iku-tagSelector em:hover{
+	background-position:0 -14px;
+}
+
+ol.iku-tags-list{
+	list-style:none;
+	margin:0;
+	padding:0;
+	max-height:140px;
+	_height:140px;
+	overflow:auto;
+	word-wrap:break-word;
+	overflow-x:hidden;
+	width:100%;
+}
+
+ol.iku-tags-list li.iku-tag{
+	float:left;
+	font-size:12px;
+	line-height:1;
+	margin:0;
+	list-style:none;
+	*margin-bottom:5px;
+}
+
+ol.iku-tags-list li.iku-tag a{
+	border:1px solid #ccc;
+	background-color:#eee;
+	color:#666;
+	margin:0 4px 5px 0;
+	padding:4px 10px;
+	text-decoration:none;
+	white-space:nowrap;
+	float:left;
+	font-weight:normal;
+	-webkit-border-radius:12px;
+	-moz-border-radius:12px;
+	border-radius:12px;
+}
+
+ol.iku-tags-list li.iku-tag a:hover{
+	background-color:#fff;
+}
+
+ol.iku-tags-list li.iku-empty{
+	width:100%;
+	height:20px;
+	line-height:20px;
+	text-align:center;
+}
+
+.iku-form form{
+	float:none;
+	margin:0;
+	min-width:0;
+}
+
+select[name="category"]{
+	font-weight:normal;
+	font-size:12px;
+}
+
+.iku-form label{
+	position:relative;
+	color:#9a9a9a;
+	font-size:12px;
+	padding-left:0;
+	line-height:18px;
+}
+
+.iku-form-cate label,.iku-form-meta label{
+	font-weight:bold;
+}
+
+.iku-form-priv label input,.iku-form-sync label input{
+	margin:0;
+}
+
+.iku-form-meta textarea{
+	background:none;
+	border-radius:none;
+	color:#9a9a9a;
+	position:relative;
+	top:0;
+	left:0;
+}
+
+button.iku-b-submit,button.iku-b-close{
+	color:#000;
+	font-weight:normal;
+	font-size:12px;
+	line-height:24px;
+	display:inline-block;
+}
+
+button.iku-b-submit:hover{
+	background:#ebebeb url(../i/popup/button-main.gif) scroll no-repeat 0 0;
+}
+
+button.iku-b-close:hover{
+	background:#ebebeb url(../i/popup/button-sub.png) scroll no-repeat 0 0;
+}
