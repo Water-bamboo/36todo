@@ -7,49 +7,6 @@ class TodoAction extends frontendAction {
 		return (isset($_SESSION['member']) && isset($_SESSION['userid']));
 	}
 	
-	//按时间排序 
-	public function index2($r=0){
-		if (!$this->isLogin()) {
-			return $this->display(":User/login");
-		}
-
-		$Todos = M('todos'); // 实例化Data数据模型
-		if ($r == 0) {
-			$condition['readiness'] = 0;
-		}
-		$condition['isvalid'] = 1;
-		$condition['userid'] = $_SESSION['userid'];
-		//dump($_SESSION);
-        $data = $Todos->where($condition)->order('id DESC')->select();
-
-		$current = strtotime("today");
-		
-		$const_one_day = 24*60*60;
-		
-	/*	$this->latest[] = new array();
-		$temp = new array();
-		$count = count($data);
-		$new_array = false;
-		for ($i = 0; $i < $count; $i++) {
-			if ($data[$i].create_time >= $current) {
-				$temp = $data[$i];//append up.
-			}
-			else {
-//				if ($i != 0) {
-					$this->latest[] = $temp;
-					$temp = new array();
-	//			}
-		//		$temp = $data[$i];
-				$current -= $const_one_day;
-			}
-		}
-		$this->latest[] = $temp;
-*/
-		$this->isshowdone = $r == 0 ? "" : "checked";
-		//print_r($r);
-        $this->display();
-    }
-	
 	public function index($r=-1, $catid=-1){
 		//print_r($catid);
 		if (!$this->isLogin()) {
@@ -205,7 +162,7 @@ class TodoAction extends frontendAction {
 		$condition['remind_time'] = array('lt', date('Y-m-d'));
 		$ajaxdata = $Noties->field(array('id', 'userid'))->where($condition)->select();//id');->order('id DESC')
 		if (!$ajaxdata) {
-			return $this->ajaxReturn($ajaxdata);
+			return $this->ajaxReturn(array("count"=>0));
 		}
 		//print_r($ajaxdata);
 		
@@ -243,7 +200,7 @@ class TodoAction extends frontendAction {
 			}*/
 		}
 //		$ajaxdata = $Noties->getLastSql();
-		$this->ajaxReturn(count($ajaxdata));
+		$this->ajaxReturn(array("count"=>count($ajaxdata)));
 	}
 	
 	public function sendWithWeChat() {
@@ -324,7 +281,7 @@ class TodoAction extends frontendAction {
 		if (!$this->isLogin()) {
 			return $this->ajaxReturn($ajaxdata);
 		}
-		
+
 		if ($id < 0) {
 			$ajaxdata['result'] = -1;
 		}

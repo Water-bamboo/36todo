@@ -78,10 +78,15 @@ class UserAction extends Action {
 		$Result = $User->where($condition)->select();
 		//dump($Result);
 		if ($Result) {
-			$_SESSION['member'] = $Result[0]['username'];
-			$_SESSION['userid'] = $Result[0]['id'];
-			$this->redirect('/Todo/');
-			//$this->display('/Todo/');
+			/*if ($Result['infoverified'] == 0) {
+				$this->error("该帐号未验证，请先验证");
+			}
+			else */
+			{
+				$_SESSION['member'] = $Result[0]['username'];
+				$_SESSION['userid'] = $Result[0]['id'];
+				$this->redirect('/Todo/');
+			}
 		}
 		else {
 			$this->error("账户名或密码出错~");
